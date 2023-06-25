@@ -1,0 +1,8 @@
+name: isues-job
+on: issues
+jobs:
+    infojob:
+        runs-on: ubuntu-latest
+        steps:
+            - name: get output data
+              run: echo " ${{ toJSON(github.event) }}"
